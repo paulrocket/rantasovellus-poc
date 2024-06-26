@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
-    
-    </>
-  )
+    <div>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/menu">Menu</Link></li>
+        </ul>
+      </nav>
+      <Outlet />
+    </div>
+  );
 }
 
 export default App
