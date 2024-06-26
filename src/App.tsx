@@ -7,7 +7,7 @@ const App: React.FC = () => {
   return (
     <div>
       <Navigation />
-      <div className="pt-16">
+      <div>
         <Outlet />
       </div>
     </div>

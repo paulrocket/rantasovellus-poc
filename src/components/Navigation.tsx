@@ -6,7 +6,7 @@ const Navigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md">
+    <nav className="fixed bottom-0 left-0 md:bottom-auto md:top-0 w-full bg-white shadow-md z-50">
       <ul className="flex justify-around md:justify-start">
         <li className={`flex items-center justify-center flex-grow ${location.pathname === '/' ? 'text-blue-500 border' : ''}`}>
           <Link to="/" className="flex items-center">
