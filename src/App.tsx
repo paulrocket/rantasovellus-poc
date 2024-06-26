@@ -1,17 +1,15 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <div>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-        </ul>
-      </nav>
-      <Outlet />
+      <Navigation />
+      <div className="pt-16">
+        <Outlet />
+      </div>
     </div>
   );
 }
